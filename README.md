@@ -21,15 +21,17 @@ Also:
 
 # Table of Contents:
 
-- Requirements - https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#requirements
-- Browser Compatibility - https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#browsercompatibility
-- License
-- Features
-- Usage
-- Custom Options
-- Custom Classes
-- Custom Methods
-- Known Bugs
+[Donate with PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=RSJEW3N9PRMYY&lc=IT&item_name=Manuele%20Sarfatti&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+
+- [Requirements](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#requirements)
+- [Browser Compatibility](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#browser-compatibility)
+- [License](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#license)
+- [Features]((https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#features)
+- [Usage](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#usage)
+- [Custom Options](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#custom-options)
+- [Custom Classes](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#custom-classes)
+- [Custom Methods](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#custom-methods)
+- [Known Bugs](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#known-bugs)
 
 ## Requirements
 
