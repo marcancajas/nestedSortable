@@ -19,7 +19,7 @@ Also:
 - Changed: no drop zone will appear at all if you try to nest an item under another one that has the *no-nesting* class.
 - Added: **doNotClear** option to prevent the plugin from deleting empty lists
 
-# Table of Contents:
+# Table of Contents
 
 - [Requirements](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#requirements)
 - [Browser Compatibility](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#browser-compatibility)
