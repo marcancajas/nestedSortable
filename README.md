@@ -27,7 +27,7 @@ Also:
 - [Features](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#features)
 - [Usage](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#usage)
 - [Custom Options](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#custom-options)
-- [Custom Classes](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#custom-classes)
+- [Custom Classes](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#custom-classes-you-will-set-them-in-the-options-as-well)
 - [Custom Methods](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#custom-methods)
 - [Known Bugs](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#known-bugs)
 
