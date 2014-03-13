@@ -10,7 +10,7 @@ Housekeeping plans:
 3. New examples documentation page (Waiting)
 	- **Current demonstration page:** http://mjsarfatti.com/sandbox/nestedSortable/
 	
-## What's new in version 2.0
+# What's new in version 2.0
 
 The biggest change is that your nested list can now behave as a tree with expand/collapse funcionality. Simply set `isTree` to **true** in the options and you are good to go! Check the [demo](http://mjsarfatti.com/sandbox/nestedSortable) out to see what can be done with nestedSortable and a little CSS. (Note that all **nestedSortable** does is to assign/remove classes on the fly)  
 Also:
@@ -19,7 +19,7 @@ Also:
 - Changed: no drop zone will appear at all if you try to nest an item under another one that has the *no-nesting* class.
 - Added: **doNotClear** option to prevent the plugin from deleting empty lists
 
-#Table of Contents:
+# Table of Contents:
 
 Requirements
 Browser Compatibility
