@@ -9,7 +9,6 @@ Housekeeping plans:
 2. Testing in Jquery UI Sortable 1.9 (Waiting)
 3. New examples documentation page (Waiting)
 	- **Current demonstration page:** http://mjsarfatti.com/sandbox/nestedSortable/
-	- 
 	
 
 Table of Contents:
