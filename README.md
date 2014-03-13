@@ -1,14 +1,27 @@
-**ANNOUNCEMENT**  
-
-**I'm sorry to say that I am not able to keep up the pace in developing this project anymore. I know how much nestedSortable is important for web applications, and I still can't understand why it's not part of jQuery-UI. I also think the base of the plugin is very strong, and deserves much more attention and involvement.**  
-**If anybody is willing to take this project, please say so [here](https://github.com/mjsarfatti/nestedSortable/issues/95).**  
-**Thank you.**
-
 # nestedSortable jQuery plugin
 
 **nestedSortable** is a jQuery plugin that extends jQuery Sortable UI functionalities to nested lists.  
 *Note: Version 2.0 is published in branch '2.0alpha' and is available for testing. At the moment it has only been tested in Firefox and Chrome, if you work with IE feel free to give it a shot and let me know if something goes wrong.*
 
+Housekeeping plans:
+
+1. Testing in latest IE versions.
+2. Testing in Jquery UI Sortable 1.9
+3. New examples documentation page
+
+## Requirements
+
+jQuery UI Sortable 1.10+
+
+## Browser Compatibility
+
+Tested with: Firefox, Chrome  
+**Testing it in latest IE versions soon as a start**
+
+## License
+
+This work is licensed under the MIT License.  
+Which means you can do pretty much whatever you want with it.
 
 ## What's new in version 2.0
 
@@ -18,7 +31,6 @@ Also:
 - Fixed: a small bug in the **protectRoot** function
 - Changed: no drop zone will appear at all if you try to nest an item under another one that has the *no-nesting* class.
 - Added: **doNotClear** option to prevent the plugin from deleting empty lists
-
 
 ## Features
 
@@ -150,21 +162,6 @@ Also, the default list type is `<ol>`.
 
 *nestedSortable* doesn't work properly with connected draggables, because of the way Draggable simulates Sortable `mouseStart` and `mouseStop` events. This bug might or might not be fixed some time in the future (it's not specific to this plugin).
 
-## Requirements
 
-jQuery UI Sortable 1.10+ (might work with 1.9, but not tested)
-
-## Browser Compatibility
-
-Tested with: Firefox, Chrome  
-**NOTE: This is still an alpha version, please test thoroughly in whichever version of IE you target**
-
-## License
-
-This work is licensed under the MIT License.  
-Which means you can do pretty much whatever you want with it.
-
-Nonetheless if this plugin saved you money, saved you time or saved your life please take a moment to think about the work I've been doing for you and consider sharing a bit of your joy with me. Your donation, however small, will be greatly appreciated.  
-Thank you.
 
 [Donate with PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=RSJEW3N9PRMYY&lc=IT&item_name=Manuele%20Sarfatti&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
