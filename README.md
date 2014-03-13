@@ -21,15 +21,15 @@ Also:
 
 # Table of Contents:
 
-Requirements
-Browser Compatibility
-License
-Features
-Usage
-Custom Options
-Custom Classes
-Custom Methods
-Known Bugs
+- Requirements - https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#requirements
+- Browser Compatibility - https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#browsercompatibility
+- License
+- Features
+- Usage
+- Custom Options
+- Custom Classes
+- Custom Methods
+- Known Bugs
 
 ## Requirements
 
