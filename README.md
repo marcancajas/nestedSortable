@@ -8,7 +8,7 @@ Housekeeping plans:
 1. Testing in latest IE versions. (Planned)
 2. Testing in Jquery UI Sortable 1.9 (Waiting)
 3. New examples documentation page (Waiting)
-	- **Current demo page:** http://mjsarfatti.com/sandbox/nestedSortable/
+	- **Current demonstration page:** http://mjsarfatti.com/sandbox/nestedSortable/
 
 ## Requirements
 
