@@ -24,7 +24,7 @@ Also:
 - [Requirements](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#requirements)
 - [Browser Compatibility](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#browser-compatibility)
 - [License](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#license)
-- [Features]((https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#features)
+- [Features](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#features)
 - [Usage](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#usage)
 - [Custom Options](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#custom-options)
 - [Custom Classes](https://github.com/marcancajas/nestedSortable/blob/2.0alpha/README.md#custom-classes)
