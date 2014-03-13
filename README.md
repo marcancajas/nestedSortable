@@ -163,6 +163,4 @@ Also, the default list type is `<ol>`.
 
 *nestedSortable* doesn't work properly with connected draggables, because of the way Draggable simulates Sortable `mouseStart` and `mouseStop` events. This bug might or might not be fixed some time in the future (it's not specific to this plugin).
 
-
-
 [Donate with PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=RSJEW3N9PRMYY&lc=IT&item_name=Manuele%20Sarfatti&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
