@@ -31,14 +31,16 @@
 			rtl: false,
 			startCollapsed: false,
 			tabSize: 20,
-
+			scrollX: true, //if true, the page scrolls when a list item is dragged past the width of the container
+			scrollY: true, //if true, the page scrolls when a list item is dragged past the height of the container
 			branchClass: 'mjs-nestedSortable-branch',
 			collapsedClass: 'mjs-nestedSortable-collapsed',
 			disableNestingClass: 'mjs-nestedSortable-no-nesting',
 			errorClass: 'mjs-nestedSortable-error',
 			expandedClass: 'mjs-nestedSortable-expanded',
 			hoveringClass: 'mjs-nestedSortable-hovering',
-			leafClass: 'mjs-nestedSortable-leaf'
+			leafClass: 'mjs-nestedSortable-leaf',
+			disabledClass: 'mjs-nestedSortable-disabled'
 		},
 
 		_create: function() {
@@ -96,32 +98,35 @@
 			if(this.options.scroll) {
 				if(this.scrollParent[0] != document && this.scrollParent[0].tagName != 'HTML') {
 
-					if((this.overflowOffset.top + this.scrollParent[0].offsetHeight) - event.pageY < o.scrollSensitivity) {
-						this.scrollParent[0].scrollTop = scrolled = this.scrollParent[0].scrollTop + o.scrollSpeed;
-					} else if(event.pageY - this.overflowOffset.top < o.scrollSensitivity) {
-						this.scrollParent[0].scrollTop = scrolled = this.scrollParent[0].scrollTop - o.scrollSpeed;
+					if( o.scrollY ) {
+						if((this.overflowOffset.top + this.scrollParent[0].offsetHeight) - event.pageY < o.scrollSensitivity) {
+							this.scrollParent[0].scrollTop = scrolled = this.scrollParent[0].scrollTop + o.scrollSpeed;
+						} else if(event.pageY - this.overflowOffset.top < o.scrollSensitivity) {
+							this.scrollParent[0].scrollTop = scrolled = this.scrollParent[0].scrollTop - o.scrollSpeed;
+						}
 					}
-
-					if((this.overflowOffset.left + this.scrollParent[0].offsetWidth) - event.pageX < o.scrollSensitivity) {
-						this.scrollParent[0].scrollLeft = scrolled = this.scrollParent[0].scrollLeft + o.scrollSpeed;
-					} else if(event.pageX - this.overflowOffset.left < o.scrollSensitivity) {
-						this.scrollParent[0].scrollLeft = scrolled = this.scrollParent[0].scrollLeft - o.scrollSpeed;
+					if( o.scrollX ) {
+						if((this.overflowOffset.left + this.scrollParent[0].offsetWidth) - event.pageX < o.scrollSensitivity) {
+							this.scrollParent[0].scrollLeft = scrolled = this.scrollParent[0].scrollLeft + o.scrollSpeed;
+						} else if(event.pageX - this.overflowOffset.left < o.scrollSensitivity) {
+							this.scrollParent[0].scrollLeft = scrolled = this.scrollParent[0].scrollLeft - o.scrollSpeed;
+						}
 					}
-
 				} else {
-
-					if(event.pageY - $(document).scrollTop() < o.scrollSensitivity) {
-						scrolled = $(document).scrollTop($(document).scrollTop() - o.scrollSpeed);
-					} else if($(window).height() - (event.pageY - $(document).scrollTop()) < o.scrollSensitivity) {
-						scrolled = $(document).scrollTop($(document).scrollTop() + o.scrollSpeed);
+					if( o.scrollY ) {
+						if(event.pageY - $(document).scrollTop() < o.scrollSensitivity) {
+							scrolled = $(document).scrollTop($(document).scrollTop() - o.scrollSpeed);
+						} else if($(window).height() - (event.pageY - $(document).scrollTop()) < o.scrollSensitivity) {
+							scrolled = $(document).scrollTop($(document).scrollTop() + o.scrollSpeed);
+						}
 					}
-
-					if(event.pageX - $(document).scrollLeft() < o.scrollSensitivity) {
-						scrolled = $(document).scrollLeft($(document).scrollLeft() - o.scrollSpeed);
-					} else if($(window).width() - (event.pageX - $(document).scrollLeft()) < o.scrollSensitivity) {
-						scrolled = $(document).scrollLeft($(document).scrollLeft() + o.scrollSpeed);
+					if( o.scrollX ) {
+						if(event.pageX - $(document).scrollLeft() < o.scrollSensitivity) {
+							scrolled = $(document).scrollLeft($(document).scrollLeft() - o.scrollSpeed);
+						} else if($(window).width() - (event.pageX - $(document).scrollLeft()) < o.scrollSensitivity) {
+							scrolled = $(document).scrollLeft($(document).scrollLeft() + o.scrollSpeed);
+						}
 					}
-
 				}
 
 				if(scrolled !== false && $.ui.ddmanager && !o.dropBehaviour)
@@ -176,6 +181,27 @@
 				// beetween the outer and inner container.
 				if (item.instance !== this.currentContainer) {
 					continue;
+				}
+
+				// No action if intersected item is disabled 
+				// and the element above or below in the direction we're going is also disabled
+				if (itemElement.className.indexOf(o.disabledClass) !== -1) {
+					// Note: intersection hardcoded direction values from jquery.ui.sortable.js:_intersectsWithPointer
+					if (intersection === 2) {
+						// Going down
+						var itemAfter = this.items[i + 1];
+						if (itemAfter && itemAfter.item[0].className.indexOf(o.disabledClass) !== -1){
+							continue;
+						}
+						
+					}
+					else if (intersection === 1) {
+						// Going up
+						var itemBefore = this.items[i - 1];
+						if (itemBefore && itemBefore.item[0].className.indexOf(o.disabledClass) !== -1){
+							continue;
+						}
+					}
 				}
 
 				// cannot intersect with itself
@@ -257,7 +283,7 @@
 			// mjs - to find the previous sibling in the list, keep backtracking until we hit a valid list item.
 			var previousItem = this.placeholder[0].previousSibling ? $(this.placeholder[0].previousSibling) : null;
 			if (previousItem != null) {
-				while (previousItem[0].nodeName.toLowerCase() != 'li' || previousItem[0] == this.currentItem[0] || previousItem[0] == this.helper[0]) {
+				while (previousItem[0].nodeName.toLowerCase() != 'li' || previousItem[0].className.indexOf(o.disabledClass) !== -1 || previousItem[0] == this.currentItem[0] || previousItem[0] == this.helper[0]) {
 					if (previousItem[0].previousSibling) {
 						previousItem = $(previousItem[0].previousSibling);
 					} else {
@@ -270,7 +296,7 @@
 			// mjs - to find the next sibling in the list, keep stepping forward until we hit a valid list item.
 			var nextItem = this.placeholder[0].nextSibling ? $(this.placeholder[0].nextSibling) : null;
 			if (nextItem != null) {
-				while (nextItem[0].nodeName.toLowerCase() != 'li' || nextItem[0] == this.currentItem[0] || nextItem[0] == this.helper[0]) {
+				while (nextItem[0].nodeName.toLowerCase() != 'li' || nextItem[0].className.indexOf(o.disabledClass) !== -1 || nextItem[0] == this.currentItem[0] || nextItem[0] == this.helper[0]) {
 					if (nextItem[0].nextSibling) {
 						nextItem = $(nextItem[0].nextSibling);
 					} else {
