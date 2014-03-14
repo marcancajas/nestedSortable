@@ -5,8 +5,8 @@
 
 Housekeeping plans:
 
-1. Testing in latest IE and Safari versions. (Tested from other fork)
-2. Testing in Jquery UI Sortable 1.9 (Waiting)
+1. v2.0: Testing in latest IE and Safari versions. (Tested from other fork)
+2. v2.0: Testing in Jquery UI 1.10.4 (Planned)
 3. New examples documentation page (Waiting)
 	- **Current demonstration page:** http://mjsarfatti.com/sandbox/nestedSortable/
 	
@@ -33,12 +33,15 @@ Also:
 
 ## Requirements
 
-jQuery UI Sortable 1.10+
+- jQuery 1.4.0 - 1.11.0
+- jQuery UI Sortable 1.8.0 - 1.10.3
 
 ## Browser Compatibility
 
-Tested with: Firefox, Chrome  
-**Testing it in latest IE versions soon as a start**
+Tested with: IE 6/7/8, Firefox, Chrome, Safari 
+
+With the touchpunch library it also works on Android, iOS, BlackBerry 10, Windows Surface (touch) and Windows Phone.
+http://touchpunch.furf.com/
 
 ## License
 
