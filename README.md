@@ -33,8 +33,8 @@ Also:
 
 ## Requirements
 
-jQuery 1.4.0 - 1.11.0
-jQuery UI Sortable 1.8.0 - 1.10.3
+- jQuery 1.4.0 - 1.11.0
+- jQuery UI Sortable 1.8.0 - 1.10.3
 
 ## Browser Compatibility
 
