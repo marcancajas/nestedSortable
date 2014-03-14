@@ -33,12 +33,16 @@ Also:
 
 ## Requirements
 
-jQuery UI Sortable 1.10+
+jQuery 1.4.0 - 1.11.0
+jQuery UI Sortable 1.8.0 - 1.10.3
 
 ## Browser Compatibility
 
-Tested with: Firefox, Chrome  
-**Testing it in latest IE versions soon as a start**
+Tested with: IE 6/7/8, Firefox, Chrome, Safari 
+
+With the touchpunch library it also works on Android, iOS, BlackBerry 10, Windows Surface (touch) and Windows Phone.
+http://touchpunch.furf.com/
+
 
 ## License
 
