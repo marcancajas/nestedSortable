@@ -6,7 +6,7 @@
 Housekeeping plans:
 
 1. v2.0: Testing in latest IE and Safari versions. (Tested from other fork)
-2. v2.0: Testing in Jquery UI Sortable 1.9 (Planned)
+2. v2.0: Testing in Jquery UI 1.10.4 (Planned)
 3. New examples documentation page (Waiting)
 	- **Current demonstration page:** http://mjsarfatti.com/sandbox/nestedSortable/
 	
